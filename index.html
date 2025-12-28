@@ -7,6 +7,8 @@ if (-not $args) {
     Write-Host ''
     Write-Host 'Need help? Check our homepage: ' -NoNewline
     Write-Host 'https://massgrave.dev' -ForegroundColor Green
+    Write-Host 'Distributed by: ' -NoNewline
+    Write-Host 'https://kaosu.dev/mas' -ForegroundColor Green
     Write-Host ''
 }
 
@@ -138,5 +140,6 @@ if (-not $args) {
     $FilePaths = @("$env:SystemRoot\Temp\MAS*.cmd", "$env:USERPROFILE\AppData\Local\Temp\MAS*.cmd")
     foreach ($FilePath in $FilePaths) { Get-Item $FilePath -ErrorAction SilentlyContinue | Remove-Item }
 } @args
+
 
 
